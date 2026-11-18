@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>त्रिलोक भंडार (Trilok Bhandar) | प्रीमियम क्लॉथ शोरूम, बिसौली</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #800020; /* रॉयल मैरून */
+            --secondary: #D4AF37; /* गोल्डन एक्सेंट */
+            --dark: #1E1E24;
+            --light: #FAF8F5;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            font-size: 0.75rem;
+            color: #666;
+            display: block;
+            margin-top: -4px;
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #5c0017;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 30, 36, 0.75), rgba(128, 0, 32, 0.8)), 
+                        url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.25);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            font-size: 0.95rem;
+            color: #f0f0f0;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--white);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        /* Features Strip */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            padding: 30px 5%;
+            background: var(--white);
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+        }
+
+        .feature-box i {
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        .feature-box h4 {
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+
+        .feature-box p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Catalog Section */
+        .section {
+            padding: 50px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            color: var(--primary);
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Filter Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 8px 18px;
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Product Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 18px;
+        }
+
+        .category-tag {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .card-body h4 {
+            font-size: 1.1rem;
+            margin: 5px 0;
+            color: var(--dark);
+        }
+
+        .card-body p {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .wa-order {
+            background: var(--whatsapp);
+            color: var(--white);
+            padding: 7px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Store Info & Timing */
+        .store-info {
+            background: var(--dark);
+            color: var(--white);
+            padding: 50px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .info-details h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .info-item i {
+            color: var(--secondary);
+            margin-top: 4px;
+        }
+
+        .cta-card {
+            background: rgba(255,255,255,0.06);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+
+        .cta-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-card p {
+            font-size: 0.85rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #141418;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Floating WhatsApp */
+        .float-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--whatsapp);
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <h1>त्रिलोक भंडार</h1>
+            <span>Main Chowk, Bazar, Bisauli</span>
+        </div>
+        <a href="tel:08941097787" class="nav-btn">
+            <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="badge">⭐ बिसौली का भरोसेमंद फैमिली क्लॉथ शोरूम</div>
+        <h2>हर अवसर के लिए शानदार और प्रीमियम परिधान</h2>
+        <p>शादी-ब्याह की शॉपिंग हो या त्योहारों का नया कलेक्शन — बनारसी साड़ी, डिज़ाइनर सूट, मेंस वियर और किड्स वियर की विशाल रेंज अब एक ही छत के नीचे।</p>
+        <div class="hero-btns">
+            <a href="#collection" class="btn-gold">नया कलेक्शन देखें ↓</a>
+            <a href="https://wa.me/918941097787?text=नमस्ते%20त्रिलोक%20भंडार,%20मुझे%20आपके%20नए%20कलेक्शन%20के%20बारे%20में%20जानकारी%20चाहिए।" class="btn-outline" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp पर पूछें
+            </a>
+        </div>
+    </section>
+
+    <!-- Highlights -->
+    <div class="features">
+        <div class="feature-box">
+            <i class="fas fa-gem"></i>
+            <div>
+                <h4>प्रीमियम क्वालिटी</h4>
+                <p>100% भरोसेमंद फैब्रिक और लेटेस्ट डिज़ाइन</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-tags"></i>
+            <div>
+                <h4>वाजिब दाम</h4>
+                <p>हर बजट के अनुरूप बेहतरीन कलेक्शन</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-users"></i>
+            <div>
+                <h4>कम्प्लीट फैमिली शॉप</h4>
+                <p>लेडीज, जेंट्स और बच्चों के सभी परिधान</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Catalog -->
+    <section class="section" id="collection">
+        <div class="section-title">
+            <h3>हमारा स्पेशल कलेक्शन</h3>
+            <p>पसंदीदा ड्रेस चुनें और सीधे WhatsApp पर फोटो या रेट पूछें</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="filterItems('all')">सभी (All)</button>
+            <button class="tab-btn" onclick="filterItems('women')">साड़ी और सूट</button>
+            <button class="tab-btn" onclick="filterItems('men')">मेंस वियर</button>
+            <button class="tab-btn" onclick="filterItems('wedding')">वेडिंग स्पेशल</button>
+        </div>
+
+        <div class="grid" id="product-grid">
+            <!-- Item 1 -->
+            <div class="card" data-category="women wedding">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Banarasi Silk Saree" class="card-img">
+                <div class="card-body">
+                    <span class="category-tag">वेडिंग और फेस्टिव</span>
+                    <h4>रॉयल बनारसी सिल्क साड़ी</h4>
+                    <p>शादी और खास अवसरों के लिए शानदार ज़री वर्क वाली प्रीमियम साड़ियाँ।</p>
+                    <div class="price-row">
+                        <span class="price">₹1,499 से शुरू</span>
+                        <a href="https://wa.me/918941097787?text=नमस्ते%20त्रिलोक%20भंडार,%20मुझे%20रॉयल%20बनारसी%20सिल्क%20साड़ी%20के%20डिज़ाइन%20और%20रेट%20देखने%20हैं।" class="wa-order" target="_blank">
+                            <i class="fab fa-whatsapp"></i> रेट पूछें
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card" data-category="women">
+                <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=600&q=80" alt="Designer Suit" class="card-img">
+                <div class="card-body">
+                    <span class="category-tag">लेडीज कलेक्शन</span>
+                    <h4>डिज़ाइनर पार्टी वियर सूट</h4>
+                    <p>लेटेस्ट एम्ब्रॉयडरी और कम्फर्टेबल फैब्रिक में अनस्टिच्ड व रेडीमेड सूट।</p>
+                    <div class="price-row">
+                        <span class="price">₹899 से शुरू</span>
+                        <a href="https://wa.me/918941097787?text=नमस्ते%20त्रिलोक%20भंडार,%20मुझे%20डिज़ाइनर%20पार्टी%20वियर%20सूट%20के%20डिज़ाइन%20देखने%20हैं।" class="wa-order" target="_blank">
+                            <i class="fab fa-whatsapp"></i> रेट पूछें
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card" data-category="men wedding">
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80" alt="Mens Kurta Set" class="card-img">
+                <div class="card-body">
+                    <span class="category-tag">मेंस एथनिक व कैजुअल</span>
+                    <h4>मेंस कुर्ता पायजामा व शर्टिंग</h4>
+                    <p>त्योहारों के लिए स्टाइलिश कुर्ता सेट और ब्रांडेड पैंट-शर्ट के कपड़े।</p>
+                    <div class="price-row">
+                        <span class="price">₹799 से शुरू</span>
+                        <a href="https://wa.me/918941097787?text=नमस्ते%20त्रिलोक%20भंडार,%20मुझे%20मेंस%20कुर्ता%20पायजामा%20और%20शर्टिंग%20कलेक्शन%20देखना%20है।" class="wa-order" target="_blank">
+                            <i class="fab fa-whatsapp"></i> रेट पूछें
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="card" data-category="wedding women">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Bridal Lehenga" class="card-img">
+                <div class="card-body">
+                    <span class="category-tag">ब्राइडल स्पेशल</span>
+                    <h4>ब्राइडल व पार्टी लहंगा चोली</h4>
+                    <p>दुल्हन और परिवार की महिलाओं के लिए हैवी वर्क वाले आकर्षक लहंगे।</p>
+                    <div class="price-row">
+                        <span class="price">₹2,999 से शुरू</span>
+                        <a href="https://wa.me/918941097787?text=नमस्ते%20त्रिलोक%20भंडार,%20मुझे%20ब्राइडल%20लहंगा%20कलेक्शन%20की%20जानकारी%20चाहिए।" class="wa-order" target="_blank">
+                            <i class="fab fa-whatsapp"></i> रेट पूछें
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Info Section -->
+    <section class="store-info">
+        <div class="info-details">
+            <h3>हमारी दुकान पर पधारें</h3>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <strong>पता:</strong><br>
+                    त्रिलोक भंडार, मेन चौक, बाज़ार, बिसौली (उत्तर प्रदेश - 243720)
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <strong>खुलने का समय:</strong><br>
+                    सोमवार से रविवार: सुबह 9:00 बजे से रात 8:30 बजे तक
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <strong>संपर्क नंबर:</strong><br>
+                    +91 89410 97787
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-card">
+            <h4>शादी या थोक खरीदारी के लिए विशेष छूट!</h4>
+            <p>घर बैठे वीडियो कॉल पर कपड़े पसंद करें या दुकान पर आने से पहले अपना समय बुक करें।</p>
+            <a href="https://wa.me/918941097787?text=नमस्ते%20त्रिलोक%20भंडार,%20मुझे%20शादी%20की%20शॉपिंग%20के%20लिए%20जानकारी%20चाहिए।" class="btn-gold" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp पर बात करें
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 त्रिलोक भंडार (Trilok Bhandar), बिसौली. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918941097787" class="float-wa" target="_blank" title="WhatsApp पर मैसेज करें">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function filterItems(category) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
